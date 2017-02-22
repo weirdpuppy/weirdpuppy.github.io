@@ -12,11 +12,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    
 }
 
 .name {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Abril Fatface', serif;
     color: #f8afa8;
     font-size: 4em;
     text-align: center;
@@ -37,6 +36,27 @@ a {
     color: inherit;
 }
 
-a:hover{
+a:hover {
     color: #f8afa8;
+}
+
+a:active {
+    color: pink;
+}
+
+.title {
+    letter-spacing: 3px;
+    color: dimgray;
+}
+
+.tabs-details {
+    display: block;
+    white-space: initial;
+    /* very important for reasons */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.highlight {
+    color: #01d1b2;
 }
