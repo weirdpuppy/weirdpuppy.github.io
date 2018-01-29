@@ -1,0 +1,504 @@
+@import url('../lib/font-awesome-4.7.0/css/font-awesome.min.css');
+:root {
+    --bg-color: rgba(0, 0, 0, .01);
+    --font-color: rgba(0, 0, 0, .4);
+    --main-color: rgba(0, 0, 0, .55);
+    --accent-color: #FFEAEA;
+    --secondary-color: #3fc3dc;
+    --border-color: rgba(0, 0, 0, .13);
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, 'Roboto', Arial, sans-serif;
+    margin: 0;
+    font-size: 18px;
+}
+
+a {
+    color: inherit;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    max-width: 900px;
+    position: relative;
+}
+
+.inner-wrapper {
+    margin: 0px 20px;
+}
+
+.head {
+    position: fixed;
+    background: white;
+    z-index: 999;
+    height: fit-content;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.shadow {
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.5);
+}
+
+.header {
+    background-color: var(--accent-color);
+    height: 190px;
+    box-shadow: 0 1px 1px rgba(34, 25, 25, 0.2);
+}
+
+.header.small {
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding-top: 20px;
+}
+
+.title {
+    position: relative;
+}
+
+#home-title {
+    height: 100%;
+}
+
+.title h1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: -30;
+}
+
+#top-row h1 {
+    font-weight: 600;
+    margin: 0;
+}
+
+.back-arrow {
+    position: absolute;
+    font-size: 3.5em;
+    left: -6%;
+    top: 5px;
+}
+
+#top-row>div:nth-child(1) {
+    min-width: 5%;
+}
+
+#top-row>div:nth-child(2) {
+    border-right: 4px solid black;
+    padding: 0px 10px;
+}
+
+#top-row>div:nth-child(3) {
+    padding-left: 20px;
+    max-width: 300px;
+}
+
+#halves {
+    align-items: center;
+    height: 60px;
+}
+
+#halves>div {
+    width: 50%;
+}
+
+#halves>div:nth-child(2) {
+    text-align: right;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0;
+    padding-left: .5em;
+}
+
+h3 {
+    font-size: 1.9em;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: .8em;
+    font-family: 'Roboto Condensed';
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    line-height: 1.5em;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: .3px;
+}
+
+#fit-first {
+    align-items: center;
+}
+
+#fit-first>div:nth-child(1) {
+    width: 5%;
+}
+
+#fit-first>div:nth-child(2) {
+    width: 90%;
+}
+
+#fit-first>div:nth-child(3) {
+    width: 5%;
+}
+
+.image-carosel {
+    display: inline-block;
+    height: 200px;
+    overflow-y: hidden;
+    width: max-content;
+}
+
+.image-block {
+    display: inherit;
+    padding: 0px 10px;
+}
+
+.image-container {
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.image-block img {
+    max-height: 100px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.5);
+    margin-bottom: 10px;
+    cursor: zoom-in;
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body.modal-open {
+    overflow: hidden!important;
+}
+
+.modal {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    /* Black w/ opacity */
+}
+
+.fullsize.image-block {}
+
+.fullsize .description {
+    float: right;
+}
+
+.fullsize .image {
+    border-bottom: 1px solid gray;
+}
+
+.fullsize .title,
+.fullsize .description {
+    font-size: 21px!important;
+    display: inline-block;
+    padding: 20px 20px 0px 20px;
+}
+
+.fullsize.image-block img {
+    background-color: white;
+    cursor: zoom-out;
+    box-shadow: none;
+    margin: auto;
+    max-width: 85vw!important;
+    max-height: min-content;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.fullsize>.image-wrapper {
+    width: fit-content;
+    background-color: white;
+    height: fit-content;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -10px;
+    -webkit-animation: fadein 1s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 1s;
+    /* Internet Explorer */
+    -o-animation: fadein 1s;
+    /* Opera < 12.1 */
+    animation: fadein 1s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes zoom-out {
+    from {
+        -webkit-transform: scale(1)
+    }
+    to {
+        -webkit-transform: scale(0)
+    }
+}
+
+@keyframes zoom-out {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(0)
+    }
+}
+
+.grid {
+    height: auto!important;
+    width: auto!important;
+    margin: 0!important;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.show-all h4:before {
+    content: 'SHOW ALL';
+    cursor: pointer;
+}
+
+.show-all.toggled h4:before {
+    content: 'SHOW LESS';
+}
+
+.image-block .title,
+.image-block .description {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.image-block p.description {
+    margin-top: 1px;
+}
+
+.next-arrow {
+    font-size: 3.5em;
+    float: right;
+}
+
+.prev-arrow {
+    font-size: 3.5em;
+    display: none;
+}
+
+.vertical-spacer {
+    height: 10px;
+}
+
+.plain-link a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-row {
+    text-align: center;
+}
+
+.social-row i {
+    padding: 0px 10px 0px 10px;
+}
+
+#two-col {
+    padding-left: 10%;
+}
+
+#two-col>div:nth-child(1) {
+    width: 50%;
+}
+
+i:hover,
+.filter:hover,
+.image-block:hover,
+.show-all:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+#home a:hover {
+    font-size: 1.5em;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.image-carosel {
+    padding: 20px;
+}
+
+.filters-row>div {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.filter {
+    width: 45px;
+    height: 30px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.5);
+}
+
+.seagreen {
+    background-color: #00DBBA;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.fuschia {
+    background-color: fuchsia;
+}
+
+.purple {
+    background-color: mediumpurple;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.footer {
+    margin-top: 100px;
+    width: 100vw;
+    background-color: var(--accent-color);
+}
+
+@media all and (max-width: 675px) {
+    body {
+        font-size: 16px;
+    }
+    #two-col {
+        padding: 0;
+    }
+    .vertical-spacer {
+        height: 30px;
+    }
+}
+
+@media all and (max-width: 1112px) {
+    .comp-bg-row>div {
+        background-size: 600px!important;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .comp-bg-row>div {
+        background-size: 500px!important;
+    }
+}
+
+@media all and (max-width: 870px) {
+    .comp-bg.text {
+        width: 90%;
+    }
+    .comp-bg-row>div {
+        background-size: 635px!important;
+    }
+}
+
+@media all and (max-width:767px) {
+    .comp-bg.right {
+        height: 900px;
+    }
+    .comp-bg-row>div {
+        background-size: 100%!important;
+    }
+}
+
+@media (max-width: 580px) {
+    .comp-bg.right {
+        height: 850px;
+    }
+}
