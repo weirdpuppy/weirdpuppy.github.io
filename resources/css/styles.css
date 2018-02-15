@@ -39,7 +39,8 @@ a {
     max-width: 700px;
 }
 
-.bio-text a {
+.bio-text a,
+#home a {
     color: blue;
 }
 
@@ -373,7 +374,7 @@ body.modal-open {
 }
 
 .plain-link a {
-    color: inherit;
+    color: inherit!important;
     text-decoration: none;
 }
 
