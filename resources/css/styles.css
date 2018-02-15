@@ -35,6 +35,14 @@ a {
     margin: 0px 20px;
 }
 
+.bio-text {
+    max-width: 700px;
+}
+
+.bio-text a {
+    color: blue;
+}
+
 .head {
     position: fixed;
     background: white;
@@ -46,6 +54,14 @@ a {
 
 .shadow {
     box-shadow: 0 1px 3px rgba(34, 25, 25, 0.5);
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .header {
@@ -369,6 +385,16 @@ body.modal-open {
     padding: 0px 10px 0px 10px;
 }
 
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+}
+
 #two-col {
     padding-left: 10%;
 }
@@ -388,7 +414,8 @@ i:hover,
     cursor: pointer;
 }
 
-#home a:hover {
+#home a:hover,
+.bio-text a:hover {
     font-size: 1.5em;
     -moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
