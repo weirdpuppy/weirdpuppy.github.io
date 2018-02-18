@@ -220,6 +220,11 @@ p {
     animation: fadein 2s;
 }
 
+.no-padding img{
+    padding: 0!important;
+    max-height: 140px;
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -267,6 +272,7 @@ body.modal-open {
     box-shadow: none;
     margin: auto;
     max-width: 85vw!important;
+    max-height: 85vh!important;
     max-height: min-content;
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
