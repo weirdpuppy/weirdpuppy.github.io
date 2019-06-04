@@ -53,6 +53,7 @@ export class NavBarComponent implements OnInit {
 
   //changes page to coming soon on hover
   comingSoon(page) {
+    console.log("coming soon!");
     let ele = document.getElementById(page.title);
     ele.innerHTML = "COMING SOON";
   }
