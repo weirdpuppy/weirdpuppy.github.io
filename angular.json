@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio": {
+    "weirdpuppy.github.io": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",

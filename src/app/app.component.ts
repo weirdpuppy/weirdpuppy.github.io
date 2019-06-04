@@ -16,7 +16,7 @@ interface Pos {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'weirdpuppy.github.io';
   subscription: Subscription;
   time: number = 10000;
   elementPositions: Pos[]=[];
