@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let page of pages">
+      <div class="col">
+        <h4>
+          <a *ngIf="!page.available" (mouseenter)="comingSoon(page)" (mouseleave)="reset()" [id]="page.title">{{page.title}}</a>
+          <a *ngIf="page.available" (click)="goToPage(page.route)">{{page.title}}</a>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
